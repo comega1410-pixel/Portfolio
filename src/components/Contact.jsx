@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { candidateInfo } from "../data/candidate";
-import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

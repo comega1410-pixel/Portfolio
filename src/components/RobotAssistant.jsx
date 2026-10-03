@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { candidateInfo } from "../data/candidate";
-import { Mail, Phone, User, X, Copy, Check, Bot } from "lucide-react";
+import { Mail, Phone, User, X, Copy, Check } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
+import IronheartCore from "./IronheartCore";
 
 const RobotAssistant = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,25 +56,10 @@ const RobotAssistant = () => {
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-              <div
-                style={{
-                  width: "38px",
-                  height: "38px",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  border: "2px solid var(--accent-cyan)",
-                  background: "#000"
-                }}
-              >
-                <img
-                  src="/robot-avatar.png"
-                  alt="Robot Assistant"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </div>
+              <IronheartCore size={38} />
               <div>
-                <h4 style={{ fontSize: "0.95rem", fontWeight: "700", color: "var(--text-primary)" }}>
-                  Arpit's AI Bot
+                <h4 style={{ fontSize: "0.95rem", fontWeight: "700", color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "0.35rem" }}>
+                  Ironheart AI Bot
                 </h4>
                 <span
                   style={{
@@ -93,7 +79,7 @@ const RobotAssistant = () => {
                       display: "inline-block"
                     }}
                   ></span>
-                  Online • Quick Info
+                  Arc Core Active • Info Desk
                 </span>
               </div>
             </div>
@@ -252,7 +238,7 @@ const RobotAssistant = () => {
               textAlign: "center"
             }}
           >
-            Hover or click to switch info card
+            Powered by Ironheart Arc Reactor Tech • Click to toggle
           </div>
         </div>
       )}
@@ -261,16 +247,16 @@ const RobotAssistant = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         onMouseEnter={() => setIsOpen(true)}
-        aria-label="Toggle Candidate Robot Assistant Info"
+        aria-label="Toggle Candidate Ironheart AI Bot Assistant Info"
         style={{
           width: "60px",
           height: "60px",
           borderRadius: "50%",
-          background: "linear-gradient(135deg, #0f172a 0%, #1c2541 100%)",
+          background: "linear-gradient(135deg, #0b132b 0%, #1c2541 100%)",
           border: "2px solid var(--accent-cyan)",
-          padding: "3px",
+          padding: "2px",
           cursor: "pointer",
-          boxShadow: "0 0 20px rgba(6, 182, 212, 0.4), 0 8px 24px rgba(0,0,0,0.5)",
+          boxShadow: "0 0 25px rgba(6, 182, 212, 0.5), 0 8px 24px rgba(0,0,0,0.5)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -279,16 +265,7 @@ const RobotAssistant = () => {
         }}
         className="floating"
       >
-        <img
-          src="/robot-avatar.png"
-          alt="Robot Assistant Avatar"
-          style={{
-            width: "100%",
-            height: "100%",
-            borderRadius: "50%",
-            objectFit: "cover"
-          }}
-        />
+        <IronheartCore size={52} />
 
         {/* Glowing Status Ring Dot */}
         <span

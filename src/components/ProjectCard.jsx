@@ -1,5 +1,5 @@
 import React from "react";
-import { ExternalLink, CheckCircle2, Info, ArrowUpRight } from "lucide-react";
+import { ExternalLink, CheckCircle2, Info } from "lucide-react";
 import { GithubIcon } from "./BrandIcons";
 
 const ProjectCard = ({ project, onSelectProject }) => {
