@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { X, ExternalLink, CheckCircle2, AlertCircle, Layers, Server, Database, Lock, ArrowUpRight } from "lucide-react";
+import { X, ExternalLink, Layers, Server, Database, Lock } from "lucide-react";
 import { GithubIcon } from "./BrandIcons";
 
 const ProjectModal = ({ project, onClose }) => {

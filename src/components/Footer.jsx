@@ -1,6 +1,6 @@
 import React from "react";
 import { candidateInfo } from "../data/candidate";
-import { Mail, Heart, Code2 } from "lucide-react";
+import { Mail, Code2 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 
 const Footer = () => {

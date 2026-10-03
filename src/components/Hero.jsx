@@ -17,30 +17,30 @@ const Hero = () => {
         overflow: "hidden"
       }}
     >
-      {/* Background Decorative Gradient Blobs */}
+      {/* High-Tech Background Mesh & Radial Gradients */}
       <div
         style={{
           position: "absolute",
-          top: "15%",
-          left: "5%",
-          width: "350px",
-          height: "350px",
+          top: "10%",
+          left: "2%",
+          width: "450px",
+          height: "450px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(0,0,0,0) 70%)",
-          filter: "blur(40px)",
+          background: "radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(0,0,0,0) 70%)",
+          filter: "blur(60px)",
           pointerEvents: "none"
         }}
       ></div>
       <div
         style={{
           position: "absolute",
-          bottom: "10%",
-          right: "5%",
-          width: "400px",
-          height: "400px",
+          bottom: "5%",
+          right: "2%",
+          width: "500px",
+          height: "500px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(0,0,0,0) 70%)",
-          filter: "blur(50px)",
+          background: "radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(0,0,0,0) 70%)",
+          filter: "blur(70px)",
           pointerEvents: "none"
         }}
       ></div>
@@ -73,22 +73,23 @@ const Hero = () => {
                   display: "inline-block"
                 }}
               ></span>
-              Available for Junior Full-Stack Roles
+              Available for IT Company & Enterprise Engineering Roles
             </div>
 
             <h1
               style={{
-                fontSize: "clamp(2.4rem, 5vw, 3.8rem)",
+                fontSize: "clamp(2.5rem, 5.2vw, 4rem)",
                 fontWeight: "800",
-                lineHeight: "1.15",
+                lineHeight: "1.12",
+                letterSpacing: "-0.03em",
                 marginBottom: "1.25rem",
                 color: "var(--text-primary)"
               }}
             >
-              Hi, I’m <span style={{ color: "var(--accent-emerald)" }}>Arpit</span> —<br />
+              Hi, I’m <span style={{ color: "var(--accent-cyan)" }}>Arpit</span> —<br />
               <span
                 style={{
-                  background: "linear-gradient(135deg, var(--accent-emerald) 0%, var(--accent-cyan) 100%)",
+                  background: "linear-gradient(135deg, #06b6d4 0%, #10b981 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent"
                 }}
@@ -99,14 +100,14 @@ const Hero = () => {
 
             <p
               style={{
-                fontSize: "1.15rem",
+                fontSize: "clamp(1rem, 2vw, 1.15rem)",
                 color: "var(--text-secondary)",
-                lineHeight: "1.65",
-                marginBottom: "2rem",
-                maxWidth: "540px"
+                lineHeight: "1.7",
+                marginBottom: "2.25rem",
+                maxWidth: "560px"
               }}
             >
-              {candidateInfo.tagline}
+              {candidateInfo.tagline} Building enterprise-grade React interfaces, secure Node REST microservices, and high-performance MongoDB data layers.
             </p>
 
             {/* CTA Action Buttons */}
@@ -145,15 +146,16 @@ const Hero = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: "1.5rem",
-                paddingTop: "1.25rem",
-                borderTop: "1px solid var(--border-color)"
+                paddingTop: "1.5rem",
+                borderTop: "1px solid var(--border-color)",
+                flexWrap: "wrap"
               }}
             >
-              <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: "500" }}>
-                Connect Profiles:
+              <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: "600" }}>
+                Developer Profiles:
               </span>
 
-              <div style={{ display: "flex", gap: "1rem" }}>
+              <div style={{ display: "flex", gap: "1.25rem" }}>
                 <a
                   href={candidateInfo.github}
                   target="_blank"
@@ -165,10 +167,13 @@ const Hero = () => {
                     transition: "color 0.2s ease",
                     display: "flex",
                     alignItems: "center",
-                    gap: "0.4rem",
+                    gap: "0.45rem",
                     textDecoration: "none",
-                    fontSize: "0.9rem"
+                    fontSize: "0.9rem",
+                    fontWeight: "500"
                   }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-cyan)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
                 >
                   <GithubIcon size={20} />
                   <span>GitHub</span>
@@ -185,10 +190,13 @@ const Hero = () => {
                     transition: "color 0.2s ease",
                     display: "flex",
                     alignItems: "center",
-                    gap: "0.4rem",
+                    gap: "0.45rem",
                     textDecoration: "none",
-                    fontSize: "0.9rem"
+                    fontSize: "0.9rem",
+                    fontWeight: "500"
                   }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#0A66C2")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
                 >
                   <LinkedinIcon size={20} />
                   <span>LinkedIn</span>
@@ -211,7 +219,7 @@ const Hero = () => {
               <div
                 style={{
                   background: "var(--bg-secondary)",
-                  padding: "0.75rem 1.25rem",
+                  padding: "0.85rem 1.25rem",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
@@ -228,13 +236,13 @@ const Hero = () => {
                     display: "flex",
                     alignItems: "center",
                     gap: "0.4rem",
-                    fontSize: "0.8rem",
+                    fontSize: "0.82rem",
                     color: "var(--text-muted)",
                     fontFamily: "var(--font-code)"
                   }}
                 >
                   <Terminal size={14} />
-                  <span>developer.js</span>
+                  <span>arpit-engineer.js</span>
                 </div>
                 <div style={{ width: "36px" }}></div>
               </div>
@@ -242,17 +250,18 @@ const Hero = () => {
               {/* Terminal Body Code Editor */}
               <div
                 style={{
-                  padding: "1.5rem",
+                  padding: "1.75rem",
                   fontFamily: "var(--font-code)",
-                  fontSize: "0.9rem",
+                  fontSize: "0.88rem",
                   lineHeight: "1.8",
                   color: "var(--text-primary)",
-                  backgroundColor: "rgba(11, 19, 43, 0.85)"
+                  backgroundColor: "rgba(6, 11, 24, 0.92)",
+                  overflowX: "auto"
                 }}
               >
                 <p>
                   <span style={{ color: "#c678dd" }}>const</span>{" "}
-                  <span style={{ color: "#e5c07b" }}>developer</span> = &#123;
+                  <span style={{ color: "#e5c07b" }}>candidate</span> = &#123;
                 </p>
                 <p style={{ paddingLeft: "1.5rem" }}>
                   <span style={{ color: "#e06c75" }}>name</span>:{" "}
@@ -260,22 +269,18 @@ const Hero = () => {
                 </p>
                 <p style={{ paddingLeft: "1.5rem" }}>
                   <span style={{ color: "#e06c75" }}>role</span>:{" "}
-                  <span style={{ color: "#98c379" }}>"MERN Stack Developer"</span>,
+                  <span style={{ color: "#98c379" }}>"Full-Stack MERN Developer"</span>,
                 </p>
                 <p style={{ paddingLeft: "1.5rem" }}>
                   <span style={{ color: "#e06c75" }}>location</span>:{" "}
                   <span style={{ color: "#98c379" }}>"{candidateInfo.location}"</span>,
                 </p>
                 <p style={{ paddingLeft: "1.5rem" }}>
-                  <span style={{ color: "#e06c75" }}>education</span>: &#123;
+                  <span style={{ color: "#e06c75" }}>academics</span>: &#123;
                 </p>
                 <p style={{ paddingLeft: "3rem" }}>
                   <span style={{ color: "#e06c75" }}>degree</span>:{" "}
                   <span style={{ color: "#98c379" }}>"{candidateInfo.degree}"</span>,
-                </p>
-                <p style={{ paddingLeft: "3rem" }}>
-                  <span style={{ color: "#e06c75" }}>institution</span>:{" "}
-                  <span style={{ color: "#98c379" }}>"{candidateInfo.college}"</span>,
                 </p>
                 <p style={{ paddingLeft: "3rem" }}>
                   <span style={{ color: "#e06c75" }}>cgpa</span>:{" "}
@@ -283,22 +288,24 @@ const Hero = () => {
                 </p>
                 <p style={{ paddingLeft: "1.5rem" }}>&#125;,</p>
                 <p style={{ paddingLeft: "1.5rem" }}>
-                  <span style={{ color: "#e06c75" }}>techStack</span>: [
+                  <span style={{ color: "#e06c75" }}>stack</span>: [
                   <span style={{ color: "#98c379" }}>"MongoDB"</span>,{" "}
-                  <span style={{ color: "#98c379" }}>"Express"</span>,{" "}
-                  <span style={{ color: "#98c379" }}>"React"</span>,{" "}
-                  <span style={{ color: "#98c379" }}>"Node"</span>]
+                  <span style={{ color: "#98c379" }}>"Express.js"</span>,{" "}
+                  <span style={{ color: "#98c379" }}>"React.js"</span>,{" "}
+                  <span style={{ color: "#98c379" }}>"Node.js"</span>]
                 </p>
                 <p>&#125;;</p>
                 <br />
                 <p>
                   <span style={{ color: "#5c6370", fontStyle: "italic" }}>
-                    // Status: Ready for engineering opportunities
+                    // Verified: REST API, Modular UI, Clean Architecture
                   </span>
                 </p>
                 <p style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
                   <CheckCircle2 size={16} style={{ color: "var(--accent-emerald)" }} />
-                  <span style={{ color: "var(--accent-emerald)" }}>Full-Stack CRUD & REST APIs Verified</span>
+                  <span style={{ color: "var(--accent-emerald)", fontWeight: "600" }}>
+                    Enterprise IT Ready • High Code Quality
+                  </span>
                 </p>
               </div>
             </div>
